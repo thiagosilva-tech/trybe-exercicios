@@ -1,0 +1,17 @@
+h1, p {
+    text-align: center;
+}
+
+li:hover {
+    background-color: aquamarine;
+    transition: 0.8s;
+}
+
+li:active {
+    font-family: monospace;
+    transition: 100ms;
+}
+
+ul, ol {
+    list-style: none;
+}

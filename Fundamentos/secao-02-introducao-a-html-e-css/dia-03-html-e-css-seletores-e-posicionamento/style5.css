@@ -24,5 +24,37 @@ li {
 }
 
 li em {
-    font-weight: bold;
+    font-weight: bolder;
+}
+
+.linguagens li:nth-child(-n+3){
+    color: blue;
+}
+
+.pink {
+    background-color: pink;
+}
+
+ul li a:hover {
+    font-weight: bolder;
+}
+
+ul li a[href*="stackoverflow"]{
+    color: orange;
+}
+
+ul li a[href*="w3schools"]{
+    color: green;
+}
+
+ul li a[href*="mozilla"]{
+    color: black;
+}
+
+ul li a[href*="devdocs"]{
+    color: yellow;
+}
+
+ul li a[href*="trybe"]{
+    color: green;
 }

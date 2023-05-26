@@ -4,4 +4,10 @@ h1, p {
 
 li:hover {
     background-color: aquamarine;
+    transition: 0.8s;
+}
+
+li:active {
+    font-family: monospace;
+    transition: 100ms;
 }

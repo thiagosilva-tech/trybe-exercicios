@@ -11,3 +11,7 @@ li:active {
     font-family: monospace;
     transition: 100ms;
 }
+
+ul, ol {
+    list-style: none;
+}

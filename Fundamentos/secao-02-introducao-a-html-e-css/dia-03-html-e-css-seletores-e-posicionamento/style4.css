@@ -1,3 +1,23 @@
 div:hover {
     border: 5px solid black;
 }
+
+#cor-primaria {
+    background-color: red;
+}
+
+#cor-secundaria { 
+    background-color: green;
+}
+
+#cor-complementar {
+    background-color: blue;
+}
+
+#cor-escura {
+    background-color: brown;
+}
+
+#cor-clara {
+    background-color: burlywood;
+}

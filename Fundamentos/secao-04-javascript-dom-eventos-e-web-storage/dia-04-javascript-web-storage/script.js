@@ -3,7 +3,7 @@ window.onload = () => {
       let content = document.querySelector(".content")
       content.style.backgroundColor = color
 
-      // 1 . Armazene a cor de fundo escolhida pela pessoa usuária no navegador.
+      // 1. Armazene a cor de fundo escolhida pela pessoa usuária no navegador.
       localStorage.setItem("backgroundColor", color);
     }
   
@@ -12,6 +12,9 @@ window.onload = () => {
       for (let index = 0; index < paragraphs.length; index += 1) {
         paragraphs[index].style.color = color
       }
+
+      // 2. Armazene a cor do texto escolhida pela pessoa usuária no navegador.
+      localStorage.setItem("colorText", color);
     }
   
     const setFontSize = (size) => {
@@ -19,6 +22,8 @@ window.onload = () => {
       for (let index = 0; index < paragraphs.length; index += 1) {
         paragraphs[index].style.fontSize = size
       }
+
+      
     }
   
     const setLineHeight = (height) => {

@@ -87,4 +87,15 @@ window.onload = () => {
         setFontFamily(event.target.innerHTML)
       })
     }
+
+    let backgroundColorStorage = localStorage.getItem("backgroundColor");
+    setBackgroundColor(backgroundColorStorage);
+    let fontColorStorage = localStorage.getItem("fontColor");
+    setFontColor(fontColorStorage);
+    let fontSizeStorage = localStorage.getItem("fontSize");
+    setFontSize(fontSizeStorage);
+    let lineHeightStorage = localStorage.getItem("lineHeight");
+    setLineHeight(lineHeightStorage);
+    let fontFamilyStorage = localStorage.getItem("fontFamily");
+    setFontFamily(fontFamilyStorage);
   }

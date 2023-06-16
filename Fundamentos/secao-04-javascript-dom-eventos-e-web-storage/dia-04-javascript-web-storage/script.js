@@ -14,7 +14,7 @@ window.onload = () => {
       }
 
       // 2. Armazene a cor do texto escolhida pela pessoa usuária no navegador.
-      localStorage.setItem("colorText", color);
+      localStorage.setItem("fontColor", color);
     }
   
     const setFontSize = (size) => {
@@ -23,7 +23,8 @@ window.onload = () => {
         paragraphs[index].style.fontSize = size
       }
 
-      
+      // 3. Armazene o tamanho da fonte escolhida pela pessoa usuária no navegador.
+      localStorage.setItem("fontSize", size);
     }
   
     const setLineHeight = (height) => {

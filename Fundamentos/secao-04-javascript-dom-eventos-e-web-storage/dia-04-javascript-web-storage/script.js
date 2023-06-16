@@ -32,6 +32,9 @@ window.onload = () => {
       for (let index = 0; index < paragraphs.length; index += 1) {
         paragraphs[index].style.lineHeight = height
       }
+
+      // 4. Armazene o espaçamento entre as linhas do texto escolhido pela pessoa usuária no navegador.
+      localStorage.setItem("lineHeight", height);
     }
   
     const setFontFamily = (family) => {

@@ -22,6 +22,7 @@ body {
 .menu-container {
   display: flex;
   width: 500px;
+  order: 2;
 }
 
 .menu-container ul {
@@ -36,4 +37,8 @@ body {
   font-size: 1.3rem;
   list-style: none;
   margin-right: 10px;
+}
+
+.logo-container{
+    order: 1;
 }

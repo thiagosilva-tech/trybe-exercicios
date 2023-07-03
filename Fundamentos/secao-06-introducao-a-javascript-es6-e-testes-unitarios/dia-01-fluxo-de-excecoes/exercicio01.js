@@ -22,21 +22,25 @@ button.addEventListener("click", () => {
 });
 
 const showPromo = (name, number) => {
-  const firstText = document.querySelector("#text-initial");
-  const secondText = document.querySelector("#text-final");
-
+  const firstText = document.querySelector('#text-initial');
+  const secondText = document.querySelector('#text-final');
+  
   try {
     checkName(name);
     checkNumber(parseInt(number));
+    checkValidRange(number);
     const productObject = checkPromo(number);
 
     firstText.innerHTML = `Boas-vindas, ${name}!`;
     secondText.innerHTML = `A promoção do dia é: 
-        ${productObject.product} no valor de R$ ${productObject.price}`;
-  } catch (err) {
+      ${productObject.product} no valor de R$ ${productObject.price}`;
+  } catch(err) {
     secondText.innerHTML = err.message;
+  } finally {
+  document.querySelector('#name-id').value = "";
+  document.querySelector('#number-id').value = "";
   }
-};
+}
 
 const checkName = (name) => {
   let letters = /[aA-zZ]+/;

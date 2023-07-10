@@ -24,3 +24,4 @@ const verifyAges = (arr, age) => {
   
   console.log(verifyAges(people, 18));
   console.log(verifyAges(people, 14));
+  

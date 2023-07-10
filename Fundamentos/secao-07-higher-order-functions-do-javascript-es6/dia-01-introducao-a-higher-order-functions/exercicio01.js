@@ -1,14 +1,10 @@
-const people = [
-    { name: 'Mateus', age: 18 },
-    { name: 'José', age: 16 },
-    { name: 'Ana', age: 23 },
-    { name: 'Cláudia', age: 20 },
-    { name: 'Bruna', age: 19 },
+const emailListInData = [
+    'roberta@email.com',
+    'paulo@email.com',
+    'anaroberta@email.com',
+    'fabiano@email.com',
   ];
   
   // Adicione seu código aqui
-//   const peopleCrescente =  people.sort((a, b) => a.age - b.age);
-  const peopleDescrecente =  people.sort((a, b) => b.age - a.age);
 
-//   console.log(peopleCrescente);
-  console.log(peopleDescrecente);
+  emailListInData.forEach((element) => console.log(`O email ${element} está cadastrado em nosso banco de dados!`));

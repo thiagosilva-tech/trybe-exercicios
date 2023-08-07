@@ -18,6 +18,7 @@ btnValidator.addEventListener('click', (event) => {
     validationReturn = validator.isHexColor(validationText);
   }
   if (validationType === 'uuid') {
+    // eslint-disable-next-line no-magic-numbers
     validationReturn = validator.isUUID(validationText, 4);
   }
   if (validationType === 'url') {
@@ -26,4 +27,4 @@ btnValidator.addEventListener('click', (event) => {
   const message = `A validação retornou ${validationReturn}`;
   const asnwed = document.getElementById('answed');
   asnwed.innerText = message;
-})
+});

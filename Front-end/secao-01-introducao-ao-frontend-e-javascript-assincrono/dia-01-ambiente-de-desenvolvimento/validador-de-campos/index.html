@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validador de Campos</title>
+  </head>
+  <body>
+    <main>
+      <form>
+        <h1>Validador de campos</h1>
+        <div id="container-input">
+          <input type="text" id="validation-text">
+          <select id="validation-type">
+            <option value="email">email</option>
+            <option value="cpf">CPF</option>
+            <option value="hexColor">Cor Hexadecimal</option>
+            <option value="uuid">UUID v4</option>
+            <option value="url">url</option>
+          </select>
+        </div>        
+        <button id="btn-validator">Validar</button>
+      </form>      
+      <p id="answed">Digite o valor, escolha a opção e clique em validar</p>
+    </main>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>

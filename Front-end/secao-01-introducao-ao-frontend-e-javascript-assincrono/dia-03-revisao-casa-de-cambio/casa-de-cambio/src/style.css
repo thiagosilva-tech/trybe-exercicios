@@ -29,6 +29,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  flex-direction: column;
 }
 
 h1 {
@@ -43,7 +44,8 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #95EBA8;
+  color: black;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -66,4 +68,23 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+#container-cambio {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 90vmin;
+  height: 60vmin;
+  border-radius: 20px;
+  margin-top: 70px;
+}
+
+#span-cambio {
+  color: #95EBA8;
+}
+
+#input-moeda {
+  border: 0 none;
+  padding: 14px;
+  border-radius: 10px;
+  margin-right: 10px;
 }

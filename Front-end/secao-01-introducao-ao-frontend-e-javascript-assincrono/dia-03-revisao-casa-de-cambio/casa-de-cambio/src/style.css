@@ -74,6 +74,7 @@ button:focus-visible {
   background-color: rgba(255, 255, 255, 0.1);
   width: 90vmin;
   height: 60vmin;
+  overflow: auto;
   border-radius: 20px;
   margin-top: 70px;
   display: flex;
@@ -100,8 +101,10 @@ button:focus-visible {
 
 .container-moeda {
   background-color: rgba(255, 255, 255, 0.1);
+  width: 130px;
+  height: 60px;
   margin: 5px;
-  padding: 0px 10px;
+  padding: 0px 15px;
   border-radius: 10px;
 }
 

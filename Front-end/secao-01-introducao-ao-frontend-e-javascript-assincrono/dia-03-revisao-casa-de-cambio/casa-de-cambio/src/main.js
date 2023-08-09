@@ -19,12 +19,20 @@ function creatRates(data, rate) {
     containerCambio.appendChild(div);
 }
 
+function removeChildCambio() {
+    const containerCambio = document.getElementById('container-moedas');
+    while (containerCambio.firstChild) {
+        containerCambio.removeChild(containerCambio.firstChild);
+    }
+}
+
 btnSource.addEventListener('click', () => {
     const inputMoeda = document.getElementById('input-moeda').value;
     if (inputMoeda) {
         getCambio(inputMoeda)
             .then((data) => {
                 if (data) {
+                    removeChildCambio();
                     const qtdRates = Object.keys(data.rates);
                     for (let index = 0; index < qtdRates.length; index += 1) {
                         creatRates(data.rates, qtdRates[index]);

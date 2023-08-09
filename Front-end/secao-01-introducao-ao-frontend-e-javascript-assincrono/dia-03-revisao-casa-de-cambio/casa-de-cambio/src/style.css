@@ -76,6 +76,9 @@ button:focus-visible {
   height: 60vmin;
   border-radius: 20px;
   margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #span-cambio {
@@ -87,4 +90,26 @@ button:focus-visible {
   padding: 14px;
   border-radius: 10px;
   margin-right: 10px;
+}
+
+#container-moedas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.container-moeda {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 5px;
+  padding: 0px 10px;
+  border-radius: 10px;
+}
+
+.p-moeda {
+  padding-left: 10px;
+}
+.span-moeda {
+  margin-left: 40px;
+  color: #FFE713;
+  padding-right: 10px;
 }

@@ -20,6 +20,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  flex-direction: column;
 }
 
 h1 {
@@ -44,6 +45,19 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  margin-top: 80px;
+  min-width: 400px;
+  min-height: 400px;
+  text-align: center;
 }
 
 @media (prefers-color-scheme: light) {

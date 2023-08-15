@@ -1,10 +1,9 @@
-import Title from "./componentes/Title"
+import HelloWorld from "./componentes/HelloWorld"
 
 function App() {
   return (
       <div>
-        <Title />
-        <p>Work in progress</p>
+        <HelloWorld />
       </div>
   )
 }

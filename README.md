@@ -10,4 +10,4 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ## Fundamentos do Desenvolvimento Web ✅
 
-[Go to this page](http://somelink.com/?target=_blank)
+[Link](https://example.org/ "title" target="_blank")

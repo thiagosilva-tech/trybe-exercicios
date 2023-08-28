@@ -11,10 +11,10 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={ <Layout /> }>
-        <Route index element={ <Home /> } />
-        <Route path="coffees" element={ <CoffeeList /> } />
-        <Route path="coffees/:coffee" element={ <Coffee /> } />
-      </Route>
+          <Route index element={ <Home /> } />
+          <Route path="coffees" element={ <CoffeeList /> } />
+          <Route path="coffees/:coffee" element={ <Coffee /> } />
+        </Route>
         <Route path="/*" element={ <NotFound /> } />
       </Routes>
     </div>

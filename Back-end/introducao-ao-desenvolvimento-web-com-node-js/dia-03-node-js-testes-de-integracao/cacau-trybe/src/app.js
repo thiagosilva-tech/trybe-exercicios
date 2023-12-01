@@ -1,16 +1,12 @@
 const express = require('express');
-
-const chocolates = [
-    { id: 1, name: 'Mint Intense', brandId: 1 },
-    { id: 2, name: 'White Coconut', brandId: 1 },
-    { id: 3, name: 'Mon Chéri', brandId: 2 },
-    { id: 4, name: 'Mounds', brandId: 3 },
-  ];
   
 const app = express();
 app.use(express.json());
 
-app.get('/chocolates', (req, res) => res.status(200).json({ chocolates }));
+app.get('/chocolates', async (req, res) => {
+    const chocolates = await cacauTrybe.getAllChocolates();
+    res.status(200).json({ chocolates }); 
+});
 
 app.get('/chocolates/:id', (req, res) => {
     const { id } = req.params;

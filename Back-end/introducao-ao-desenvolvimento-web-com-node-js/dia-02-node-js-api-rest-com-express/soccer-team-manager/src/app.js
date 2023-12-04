@@ -14,7 +14,7 @@ app.use(morgan('dev'));
 app.use(cors());
 
 app.use(express.json());
-app.use(express.static('./images'));
+app.use(express.static('images'));
 app.use(apiCredentials);
 
 app.get('/teams', (req, res) => res.json(teams));
@@ -54,5 +54,7 @@ app.delete('/teams/:id', existingId, (req, res) => {
   teams.splice(index, 1);
   res.sendStatus(204);
 });
+
+app.use((req, res) => res.sendStatus(404));
 
 module.exports = app;

@@ -5,7 +5,7 @@ const existingId = (req, res, next) => {
   if (teams.some((team) => team.id === id)) {
     return next();
   }
-  res.sendStatus(400);
+  res.sendStatus(400).json({ message: 'Time não encontrado' });
 };
 
 module.export = existingId;

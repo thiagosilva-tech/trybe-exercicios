@@ -3,6 +3,7 @@ require('express-async-errors');
 const morgan = require('morgan');
 const cors = require('cors');
 const helmet = require('helmet');
+const rateLimit = require('express-rate-limit');
 const validateTeam = require('./middlewares/validateTeam');
 const existingId = require('./middlewares/existingId');
 const teams = require('./utils/teams');
@@ -10,6 +11,14 @@ const teams = require('./utils/teams');
 const apiCredentials = require('./middlewares/apiCredentials');
 
 const app = express();
+
+const limiter = rateLimit({
+  max: 100,
+  windowMs: 15 * 60 * 1000,
+  message: 'Muitas requisições originadas desta IP',
+});
+
+app.use(limiter);
 
 app.use(helmet());
 let nextId = 3;

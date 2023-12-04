@@ -10,6 +10,7 @@ const app = express();
 let nextId = 3;
 
 app.use(express.json());
+app.use(express.static('./images'));
 app.use(apiCredentials);
 
 app.get('/teams', (req, res) => res.json(teams));

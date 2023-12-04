@@ -2,6 +2,7 @@ const express = require('express');
 require('express-async-errors');
 const morgan = require('morgan');
 const cors = require('cors');
+const helmet = require('helmet');
 const validateTeam = require('./middlewares/validateTeam');
 const existingId = require('./middlewares/existingId');
 const teams = require('./utils/teams');
@@ -9,6 +10,8 @@ const teams = require('./utils/teams');
 const apiCredentials = require('./middlewares/apiCredentials');
 
 const app = express();
+
+app.use(helmet());
 let nextId = 3;
 app.use(morgan('dev'));
 app.use(cors());

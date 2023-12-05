@@ -7,7 +7,7 @@ services:
       dockerfile: ./Dockerfile
       context: .
     # Nome do container para facilitar execução
-    container_name: trybecash_api
+    container_name: trybecash-api
     # Restarta a imagem caso algo a faça parar
     restart: always
     # Diretório padrão de execução

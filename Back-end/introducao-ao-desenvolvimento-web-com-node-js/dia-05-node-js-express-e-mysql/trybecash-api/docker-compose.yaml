@@ -27,6 +27,7 @@ services:
       MYSQL_PASSWORD: root
       MYSQL_HOST: database
       MYSQL_PORT: 3306
+      env_file: .env
     # Informa ao docker, para que o container node seja iniciado após o container database
     depends_on:
       database:
@@ -35,13 +36,15 @@ services:
     image: mysql:8.0.29
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: trybecashdb
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE_NAME}
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       timeout: 10s
       retries: 5
     ports:
-      - "33060:3306"
+      - ${MYSQL_PORT}:3306
+    env_file:
+      - .env
     volumes:
       - ./trybecash_script.sql:/docker-entrypoint-initdb.d/trybecash_script.sql

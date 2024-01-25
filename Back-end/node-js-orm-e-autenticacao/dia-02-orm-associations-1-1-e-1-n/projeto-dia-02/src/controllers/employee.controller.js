@@ -1,6 +1,6 @@
 // src/controllers/employee.controller.js
 
-const EmployeeService = require('../services/employee.service');
+const EmployeeService = require("../services/employee.service");
 
 const getAll = async (_req, res) => {
   try {
@@ -8,10 +8,27 @@ const getAll = async (_req, res) => {
     return res.status(200).json(employees);
   } catch (e) {
     console.log(e.message);
-    res.status(500).json({ message: 'Ocorreu um erro' });
+    res.status(500).json({ message: "Ocorreu um erro" });
+  }
+};
+
+const getById = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const employee = await EmployeeService.getById(id);
+    if (!employee) {
+      return res
+        .status(404)
+        .json({ message: "Pessoa colaboradora não encontrada" });
+    }
+    return res.status(200).json(employee);
+  } catch (e) {
+    console.log(e);
+    res.status(500).json({ message: "Ocorreu um erro" });
   }
 };
 
 module.exports = {
   getAll,
+  getById,
 };

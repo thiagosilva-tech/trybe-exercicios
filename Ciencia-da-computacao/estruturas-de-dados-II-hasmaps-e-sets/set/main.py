@@ -47,3 +47,55 @@ if __name__ == "__main__":
 
     conj11 = conj9.intersection(conj10)
     print(conj11)
+
+    conj12 = Conjunto()
+    for i in [1, 2, 3]:
+        conj12.add(i)
+
+    conj13 = Conjunto()
+    for i in [7, 2, 10]:
+        conj13.add(i)
+
+    conj14 = Conjunto()
+    conj15 = conj12.union(conj13)
+
+    print(conj12.issubset(conj15))
+    print(conj15.issuperset(conj12))
+    print(conj14.issubset(conj15))
+
+    estudantes = [1, 2, 3, 4, 5, 6, 7]
+    lista1_entregues = [1, 4, 7, 3]
+    lista2_entregues = [3, 1, 6]
+
+    conjunto_estudantes = Conjunto()
+    conjunto_lista1_entregues = Conjunto()
+    conjunto_lista2_entregues = Conjunto()
+
+    for elem in estudantes:
+        conjunto_estudantes.add(elem)
+
+    for elem in lista1_entregues:
+        conjunto_lista1_entregues.add(elem)
+
+    for elem in lista2_entregues:
+        conjunto_lista2_entregues.add(elem)
+
+    print(
+        "Quem ainda não entregou a lista1?",
+        conjunto_estudantes.difference(conjunto_lista1_entregues),
+    )
+
+    print(
+        "Já entregaram as 2 listas:",
+        conjunto_lista1_entregues.intersection(conjunto_lista2_entregues),
+    )
+    print(
+        "Quem já entregou pelo menos uma lista:",
+        conjunto_lista1_entregues.union(conjunto_lista2_entregues),
+    )
+    print(
+        "Quem não entregou nenhuma:",
+        conjunto_estudantes.difference(
+            conjunto_lista1_entregues.union(conjunto_lista2_entregues)
+        ),
+    )

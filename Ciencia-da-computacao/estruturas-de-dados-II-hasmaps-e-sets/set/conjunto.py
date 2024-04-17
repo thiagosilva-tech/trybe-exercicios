@@ -37,3 +37,22 @@ class Conjunto:
             if self.set[i] and conjunto_b.set[i]:
                 conjunto_c.add(i)
         return conjunto_c
+
+    def difference(self, conjunto_b):
+        conjunto_c = Conjunto()
+        for i in range(1001):
+            if self.set[i] and not conjunto_b.set[i]:
+                conjunto_c.add(i)
+        return conjunto_c
+
+    def issubset(self, conjunto_b):
+        for i in range(1001):
+            if self.set[i] and not conjunto_b.set[i]:
+                return False
+        return True
+
+    def issuperset(self, conjunto_b):
+        for i in range(1001):
+            if conjunto_b.set[i] and not self.set[i]:
+                return False
+        return True
